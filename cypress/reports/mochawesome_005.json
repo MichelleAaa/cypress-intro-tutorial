@@ -1,0 +1,125 @@
+{
+  "stats": {
+    "suites": 0,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-05-12T21:48:50.058Z",
+    "end": "2023-05-12T21:48:50.311Z",
+    "duration": 253,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "4686a7ef-4427-48ad-9f2f-a2f7315d9e88",
+      "title": "",
+      "fullFile": "cypress\\e2e\\readwritefilesdemo.cy.js",
+      "file": "cypress\\e2e\\readwritefilesdemo.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [
+        {
+          "title": "Read files using Fixture",
+          "fullTitle": "Read files using Fixture",
+          "timedOut": null,
+          "duration": 115,
+          "state": "passed",
+          "speed": "fast",
+          "pass": true,
+          "fail": false,
+          "pending": false,
+          "context": null,
+          "code": "// If your file is within the fixtures folder you can directly give the name of the file.\n// Note that you can also leave off .json if you want:\n// cy.fixture('example').then((data) => {\ncy.fixture('example.json').then(data => {\n  // name is a key in the example.json file.\n  // cy.log() will print that data to the test console.\n  cy.log(data.name);\n  cy.log(data.email);\n});\ncy.log(this.test_data.name);\ncy.log(this.test_data.email);",
+          "err": {},
+          "uuid": "29c47d5a-0708-4e05-90c7-35c2a3b0c21e",
+          "parentUUID": "4686a7ef-4427-48ad-9f2f-a2f7315d9e88",
+          "isHook": false,
+          "skipped": false
+        },
+        {
+          "title": "Read file using readFile",
+          "fullTitle": "Read file using readFile",
+          "timedOut": null,
+          "duration": 41,
+          "state": "passed",
+          "speed": "fast",
+          "pass": true,
+          "fail": false,
+          "pending": false,
+          "context": null,
+          "code": "// It's suggested to always keep your files within the file folder structure so you don't loose it/risk it being moved.\ncy.readFile('./cypress/fixtures/example.json').then(data => {\n  cy.log(data.name);\n});",
+          "err": {},
+          "uuid": "1f016550-f2d9-4eba-bc1d-a4e635723802",
+          "parentUUID": "4686a7ef-4427-48ad-9f2f-a2f7315d9e88",
+          "isHook": false,
+          "skipped": false
+        },
+        {
+          "title": "Write File Demo",
+          "fullTitle": "Write File Demo",
+          "timedOut": null,
+          "duration": 67,
+          "state": "passed",
+          "speed": "fast",
+          "pass": true,
+          "fail": false,
+          "pending": false,
+          "context": null,
+          "code": "// This would get created in the root. If you prefer, you can provide a path instead to have it save elsewhere.\ncy.writeFile('sample.txt', 'Testing the write file\\n');\ncy.writeFile('sample.txt', 'Testing the write file a 2nd Time', {\n  flag: 'a+'\n});\n// Note that the second statement overwrites the first, unless you add the flag. -- the a+ flag is to append this new text to the pre-existing text.",
+          "err": {},
+          "uuid": "e08903f5-b4d3-431e-a3ab-bac859b7697a",
+          "parentUUID": "4686a7ef-4427-48ad-9f2f-a2f7315d9e88",
+          "isHook": false,
+          "skipped": false
+        }
+      ],
+      "suites": [],
+      "passes": [
+        "29c47d5a-0708-4e05-90c7-35c2a3b0c21e",
+        "1f016550-f2d9-4eba-bc1d-a4e635723802",
+        "e08903f5-b4d3-431e-a3ab-bac859b7697a"
+      ],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 223,
+      "root": true,
+      "rootEmpty": false,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/reports"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

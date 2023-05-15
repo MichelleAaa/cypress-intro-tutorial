@@ -1,0 +1,106 @@
+{
+  "stats": {
+    "suites": 0,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-05-12T21:47:42.702Z",
+    "end": "2023-05-12T21:47:46.385Z",
+    "duration": 3683,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "9f609259-8709-4200-bb55-dd810d102cc6",
+      "title": "",
+      "fullFile": "cypress\\e2e\\fileuploadanddownload.cy.js",
+      "file": "cypress\\e2e\\fileuploadanddownload.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [
+        {
+          "title": "File Upload Test",
+          "fullTitle": "File Upload Test",
+          "timedOut": null,
+          "duration": 996,
+          "state": "passed",
+          "speed": "fast",
+          "pass": true,
+          "fail": false,
+          "pending": false,
+          "context": null,
+          "code": "// you need a website where you can do a sample upload.\ncy.visit('https://trytestingthis.netlify.app/');\n// attachFile comes from the package we added in commands.j, cypress-file-upload\n// If the file you want to attach is in the fixtures folder, then you just need to give the file name. Otherwise you have to give the file path.\ncy.get('#myfile').attachFile('example.json');",
+          "err": {},
+          "uuid": "03cc1f64-70fe-4eeb-9248-dc13cf407f28",
+          "parentUUID": "9f609259-8709-4200-bb55-dd810d102cc6",
+          "isHook": false,
+          "skipped": false
+        },
+        {
+          "title": "File Download Test",
+          "fullTitle": "File Download Test",
+          "timedOut": null,
+          "duration": 239,
+          "state": "passed",
+          "speed": "fast",
+          "pass": true,
+          "fail": false,
+          "pending": false,
+          "context": null,
+          "code": "// It gets saved to mydownloads. The file name it will get is example.jpg. (mydownloads is created at the root of the file.)\ncy.downloadFile('https://upload.wikimedia.org/wikipedia/en/a/a9/Example.jpg', 'mydownloads', 'example.jpg');",
+          "err": {},
+          "uuid": "81dc0d20-0c56-45b0-9ba6-08bb9b38b0b9",
+          "parentUUID": "9f609259-8709-4200-bb55-dd810d102cc6",
+          "isHook": false,
+          "skipped": false
+        }
+      ],
+      "suites": [],
+      "passes": [
+        "03cc1f64-70fe-4eeb-9248-dc13cf407f28",
+        "81dc0d20-0c56-45b0-9ba6-08bb9b38b0b9"
+      ],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 1235,
+      "root": true,
+      "rootEmpty": false,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/reports"
+      },
+      "version": "6.2.0"
+    }
+  }
+}
